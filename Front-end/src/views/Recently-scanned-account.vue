@@ -5,7 +5,7 @@
             <div v-for="user in $store.getters.user.scanned_products" :key="user">
                 <div class="row product">
                     <div class="rounded-picture col-4">
-                        <img src="img/logo/icon2.png" class="round">
+                        <img src="../../public/img/logo/icon2.png" class="round">
                     </div>
                     <div class="info col-8">
                         <div class="row">

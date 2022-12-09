@@ -77,6 +77,7 @@ class SingleResource(Resource):
                         function.get('update')(resource, args.get(child))
 
                 response = jsonify(self.generate_json(resource))
+                response.headers.add('Access-Control-Allow-Origin', '*')
                 response.status_code = 201
 
                 return response
@@ -93,6 +94,7 @@ class SingleResource(Resource):
                 resource.delete()
 
                 response = jsonify(message=Config.Api.delete_message.format(resource))
+                response.headers.add('Access-Control-Allow-Origin', '*')
                 response.status_code = 201
 
                 return response

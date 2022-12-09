@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request
 from app.config import Config
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 from app.jwt import jwt
 from app.database import db
 from app.api import api
@@ -43,8 +43,9 @@ def handle_request_parsing_error(err, req, schema, *, error_status_code, error_h
 
 @app.route('/', defaults={'path': '/'})
 @app.route("/<path:path>")
+# @cross_origin()
 def universal(path):
     response = jsonify(message=f"Endpoint '{path}' not found")
+    response.headers.add('Access-Control-Allow-Origin', '*')
     response.status_code = 404
-
     return response

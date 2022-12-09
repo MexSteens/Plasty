@@ -3,7 +3,7 @@
         <div class="container p-4">
             <div class="head-box">
                 <div class="head-box-column-1">
-                    <img src="img/logo/homepageicon.png" width="60px" height="60px">
+                    <img src="img/logo/homepageIcon.png" width="60px" height="60px">
                         </div>
                 <div class="head-box-column-2">
                     <div class="information">

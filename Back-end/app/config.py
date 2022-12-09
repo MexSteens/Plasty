@@ -5,6 +5,7 @@ import sqlalchemy.dialects.mysql
 configini.read('config.ini')
 
 
+
 class Config:
     """Set Flask configuration vars from .env file."""
 
@@ -12,7 +13,7 @@ class Config:
     SECRET_KEY = configini.String('flask', 'secret_key', default=os.urandom(32))
     FLASK_APP = configini.String('flask', 'app', default='app')
     FLASK_ENV = configini.String('flask', 'env')
-    FLASK_DEBUG = configini.Boolean('flask', 'debug', default=False)
+    FLASK_DEBUG = True
     MAX_CONTENT_LENGTH = configini.Integer('flask', 'max_content_length', default=16) * 1024 * 1024
     JWT_SECRET_KEY = configini.String('flask', 'secret_key', default=os.urandom(16))
     PROPAGATE_EXCEPTIONS = True

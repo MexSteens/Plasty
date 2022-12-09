@@ -9,7 +9,7 @@
           </div>
         </div>
         <div class="head-box-2">
-          <img src="img/logo/homepageicon.png" width="84px" height="84px">
+          <img src="img/logo/homepageIcon.png" width="84px" height="84px">
         </div>
       </div>
       <div class="recently-scanned">

@@ -57,6 +57,7 @@ class UsersResource(MultiResource):
 
                 # Init json response
                 response = jsonify(self.generate_json(resource, show_children=False))
+                response.headers.add('Access-Control-Allow-Origin', '*')
                 response.status_code = 201
 
                 return response
@@ -130,6 +131,7 @@ class PasswordResetResource(SingleResource):
                 resource.update()
 
                 response = jsonify(message="Password has been changed.")
+                response.headers.add('Access-Control-Allow-Origin', '*')
                 response.status_code = 201
 
                 return response

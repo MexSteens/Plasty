@@ -22,7 +22,7 @@
                         </div>
                         <div class="info col-6">
                             <h1>Get a streak</h1>
-                            <p>1 / 6</p>
+                            <p>1 / 5</p>
                             <p>get a 3 day streak</p>
                         </div>
                         <div class="xp col-3">
@@ -41,7 +41,8 @@
                                 <li class="step0"></li>
                             </ul>
                         </div>
-                        <div class="minichallenges col-11">
+                        <div class="col-1"></div>
+                        <div class="minichallenges col-10">
                             <div class="row row-minichallenges g-0">
                                 <div class="mini-info col-8">
                                     <p>get a 3 day streak</p>
@@ -92,7 +93,7 @@
                         </div>
                         <div class="info col-6">
                             <h1>Scan your products</h1>
-                            <p>2 / 7</p>
+                            <p>2 / 5</p>
                             <p>Scan 5 unique products</p>
                         </div>
                         <div class="xp col-3">
@@ -109,11 +110,12 @@
                                 <li class="step0"></li>
                                 <li class="step0"></li>
                                 <li class="step0"></li>
-                                <li class="step0"></li>
-                                <li class="step0"></li>
+                                <!-- <li class="step0"></li>
+                                <li class="step0"></li> -->
                             </ul>
                         </div>
-                        <div class="minichallenges col-11">
+                        <div class="col-1"></div>
+                        <div class="minichallenges col-10">
                             <div class="row row-minichallenges g-0">
                                 <div class="mini-info col-8">
                                     <p>Scan your first product</p>
@@ -154,7 +156,7 @@
                                     <p>+5000xp</p>
                                 </div>
                             </div>
-                            <div class="row row-minichallenges g-0">
+                            <!-- <div class="row row-minichallenges g-0">
                                 <div class="mini-info col-8">
                                     <p>Scan 100 unique products</p>
                                 </div>
@@ -169,7 +171,7 @@
                                 <div class="mini-xp col-4">
                                     <p>+100000xp</p>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -383,6 +385,10 @@ export default {
 #progressbar li:last-child:after {
     top: 110px;
     height: 40px
+}
+
+#progressbar li:nth-child(4):after {
+    top: 160px
 }
 
 #progressbar li:nth-child(3):after {
