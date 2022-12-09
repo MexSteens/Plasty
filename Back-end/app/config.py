@@ -1,5 +1,6 @@
 import configini
 import os
+import sqlalchemy.dialects.mysql
 
 configini.read('config.ini')
 
@@ -13,7 +14,7 @@ class Config:
     FLASK_ENV = configini.String('flask', 'env')
     FLASK_DEBUG = configini.Boolean('flask', 'debug', default=False)
     MAX_CONTENT_LENGTH = configini.Integer('flask', 'max_content_length', default=16) * 1024 * 1024
-    JWT_SECRET_KEY = SECRET_KEY
+    JWT_SECRET_KEY = configini.String('flask', 'secret_key', default=os.urandom(16))
     PROPAGATE_EXCEPTIONS = True
 
     class Api:
@@ -38,9 +39,9 @@ class Config:
         off_api_url = configini.String('plasty', 'off_api_url')
 
     # Database Config
-    SQLALCHEMY_DATABASE_URI = '{dialect}+{driver}://{username}:{password}@{hostname}:{port}/{database}'.format(
-        dialect=Database.dialect,
-        driver=Database.driver,
+    SQLALCHEMY_DATABASE_URI = 'mysql+mysqldb://{username}:{password}@{hostname}:{port}/{database}'.format(
+        # dialect=Database.dialect,
+        # driver=Database.driver,
         username=Database.username,
         password=Database.password,
         hostname=Database.hostname,

@@ -6,7 +6,6 @@ from webargs.flaskparser import parser
 from webargs import fields, validate
 from sqlalchemy_tables_extended import Export, Odata
 
-
 class MultiResource(Resource):
     parameters = None
     model = None
