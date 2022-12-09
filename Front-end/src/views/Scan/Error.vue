@@ -76,7 +76,7 @@ export default {
   },
   methods: {
     onSubmit() {
-      axios.post("https://api.plasty.nl/api/product", {
+      axios.post("http://localhost:5000/api/product", {
         'barcode': this.barcode,
         'name': this.productname
       })

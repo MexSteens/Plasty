@@ -61,7 +61,7 @@ export default {
   created() {
     this.res = this.$route.params.res;
 
-    axios.get('https://api.plasty.nl/api/product/' + this.res.data.product_id)
+    axios.get('http://localhost:5000/api/product/' + this.res.data.product_id)
     .then((product) => {
       this.product = product;
     })

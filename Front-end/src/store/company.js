@@ -20,7 +20,7 @@ const mutations = {
         Vue.delete(state.company, id)
     }
 }
-axios.defaults.baseURL = 'https://api.plasty.nl/api/' //'http://api.plasty.nl/api/'
+axios.defaults.baseURL = 'http://localhost:5000/api/' //'http://localhost:5000/api/'
 
 const actions = {
     companyRead({ commit }) {

@@ -32,7 +32,7 @@ export default {
     onDecode(a, b, c) {
       console.log(a, b, c);
       this.text = a;
-      axios.post('https://api.plasty.nl/api/scan/' + a)
+      axios.post('http://localhost:5000/api/scan/' + a)
       .then((res) => {
         router.push({
           name: "Success",
